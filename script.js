@@ -136,8 +136,10 @@ const app = {
         audio.src = this.currentSong.audio;
     },
     loadConfig: function() {
-        this.isRandom = this.config.isRandom;
-        this.isRepeat = this.config.isRepeat;
+        if(!this.config) {
+            this.isRandom = this.config.isRandom;
+            this.isRepeat = this.config.isRepeat;
+        }
 
         // Object.assign(this, this.config);
     },
