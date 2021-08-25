@@ -134,12 +134,12 @@ const app = {
         name.innerHTML = this.currentSong.name;
         cdThumb.style.backgroundImage = `url(${this.currentSong.path})`;
         audio.src = this.currentSong.audio;
+
+        // 
     },
     loadConfig: function() {
-        if(!this.config) {
-            this.isRandom = this.config.isRandom;
-            this.isRepeat = this.config.isRepeat;
-        }
+        this.isRandom = this.config.isRandom;
+        this.isRepeat = this.config.isRepeat;
 
         // Object.assign(this, this.config);
     },
