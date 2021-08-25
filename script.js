@@ -298,6 +298,7 @@ const app = {
     },
     start: function() {
         this.loadConfig();
+        
         this.renderConfig();
 
         this.defineProperties();
