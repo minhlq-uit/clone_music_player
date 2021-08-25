@@ -226,7 +226,11 @@ const app = {
         }
         // next khi ended
         audio.onended = () => {
-            if(!this.isRepeat) {
+            if(this.isRepeat) {
+                // 
+            } else if (this.isRandom) {
+                this.playRandomSong();
+            } else {
                 this.nextSong();
             }
             audio.play();
